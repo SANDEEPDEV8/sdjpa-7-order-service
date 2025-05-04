@@ -13,7 +13,7 @@ public class Product extends BaseEntity {
 
     @Enumerated(EnumType.STRING)
     private ProductStatus productStatus;
-
+    
     public String getDescription() {
         return description;
     }

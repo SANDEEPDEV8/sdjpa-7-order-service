@@ -124,4 +124,5 @@ public class OrderHeader extends BaseEntity {
         result = 31 * result + (getOrderStatus() != null ? getOrderStatus().hashCode() : 0);
         return result;
     }
+    // Exclude orderLines in eqality
 }
