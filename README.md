@@ -9,3 +9,18 @@ This repository contains source code examples to support my course [Spring Data 
 * Follow Spring Framework Guru on [Twitter](https://twitter.com/spring_guru)
 * Connect with John Thompson on [LinkedIn](http://www.linkedin.com/in/springguru)
 
+```
+public enum OrderStatus {
+    NEW, IN_PROCESS, COMPLETE
+}
+------
+
+    @Enumerated(EnumType.STRING)
+    private OrderStatus orderStatus;
+--------
+
+alter table order_header
+    add column order_status varchar(30);
+
+
+```
