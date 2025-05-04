@@ -9,3 +9,11 @@ This repository contains source code examples to support my course [Spring Data 
 * Follow Spring Framework Guru on [Twitter](https://twitter.com/spring_guru)
 * Connect with John Thompson on [LinkedIn](http://www.linkedin.com/in/springguru)
 
+```
+    @UpdateTimestamp
+    private Timestamp lastModifiedDate;
+------------
+alter table order_header
+    add column last_modified_date timestamp;
+
+```
