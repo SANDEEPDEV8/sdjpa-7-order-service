@@ -9,3 +9,30 @@ This repository contains source code examples to support my course [Spring Data 
 * Follow Spring Framework Guru on [Twitter](https://twitter.com/spring_guru)
 * Connect with John Thompson on [LinkedIn](http://www.linkedin.com/in/springguru)
 
+```
+
+public class OrderHeader extends BaseEntity {
+
+ public void addOrderLine(OrderLine orderLine) {
+        if (orderLines == null) {
+            orderLines = new HashSet<>();
+        }
+
+        orderLines.add(orderLine);
+        orderLine.setOrderHeader(this);
+    }
+
+-------
+
+    @Test
+    void testSaveOrderWithLine() {
+        OrderHeader orderHeader = new OrderHeader();
+        orderHeader.setCustomer("New Customer");
+
+        OrderLine orderLine = new OrderLine();
+        orderLine.setQuantityOrdered(5);
+        orderLine.setProduct(product);
+
+        orderHeader.addOrderLine(orderLine);
+
+```
