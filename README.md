@@ -9,3 +9,25 @@ This repository contains source code examples to support my course [Spring Data 
 * Follow Spring Framework Guru on [Twitter](https://twitter.com/spring_guru)
 * Connect with John Thompson on [LinkedIn](http://www.linkedin.com/in/springguru)
 
+```
+alter table order_line add column product_id bigint;
+alter table order_line add constraint order_line_product_fk
+foreign key (product_id) references product(id);
+---------
+@Entity
+public class OrderLine extends BaseEntity {
+
+    @ManyToOne
+    private Product product;
+--------
+   @Test
+    void testSaveOrderWithLine() {
+        OrderHeader orderHeader = new OrderHeader();
+        orderHeader.setCustomer("New Customer");
+
+        OrderLine orderLine = new OrderLine();
+        orderLine.setQuantityOrdered(5);
+        orderLine.setProduct(product);
+
+
+```
