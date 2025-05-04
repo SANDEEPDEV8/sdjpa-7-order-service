@@ -9,3 +9,28 @@ This repository contains source code examples to support my course [Spring Data 
 * Follow Spring Framework Guru on [Twitter](https://twitter.com/spring_guru)
 * Connect with John Thompson on [LinkedIn](http://www.linkedin.com/in/springguru)
 
+```
+ 
+@MappedSuperclass
+public abstract class BaseEntity {
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private Long id;
+
+    public Long getId() {
+        return id;
+
+---------------
+@Entity
+public class OrderHeader extends BaseEntity{
+
+    private String customer;
+
+    public String getCustomer() {
+        return customer;
+    }
+
+    public void setCustomer(String customer) {
+        this.customer = customer;
+    }
+```
