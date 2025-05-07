@@ -9,3 +9,13 @@ This repository contains source code examples to support my course [Spring Data 
 * Follow Spring Framework Guru on [Twitter](https://twitter.com/spring_guru)
 * Connect with John Thompson on [LinkedIn](http://www.linkedin.com/in/springguru)
 
+```
+public class OrderHeader extends BaseEntity {
+    @OneToMany(mappedBy = "orderHeader", cascade = {CascadeType.PERSIST, CascadeType.Remove})
+    private Set<OrderLine> orderLines;
+
+    // remove tells jpa to remove all OrderLines if OrderHeader is deleted
+
+    @OneToOne(cascade = CascadeType.PERSIST)
+    private OrderApproval orderApproval;
+```
