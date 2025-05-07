@@ -21,3 +21,7 @@ prefer right hand side
 ![image](https://github.com/user-attachments/assets/1deb5c03-7dd8-459c-b0a4-923a113a5618)
 ![image](https://github.com/user-attachments/assets/6b586cd9-a3fd-4778-b11e-6238e1d1a7a2)
 ![image](https://github.com/user-attachments/assets/8639b3ef-6ea1-433c-a690-00851b9b4728)
+
+
+JPA BUDDY PLUGIN
+![image](https://github.com/user-attachments/assets/d88de6d4-43d8-4d92-a47b-06f53e627dce)
