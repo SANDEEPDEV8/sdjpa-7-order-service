@@ -9,3 +9,12 @@ This repository contains source code examples to support my course [Spring Data 
 * Follow Spring Framework Guru on [Twitter](https://twitter.com/spring_guru)
 * Connect with John Thompson on [LinkedIn](http://www.linkedin.com/in/springguru)
 
+```
+public class OrderHeader extends BaseEntity {
+
+    @OneToOne(cascade = CascadeType.PERSIST, orphanRemoval = true)
+    private OrderApproval orderApproval;
+
+```
+
+this makes sure no orderApproval exists orphan. this is unidirectional relationship. if we use foreignkey with bidirectional relation, then this wont be a problem
