@@ -28,3 +28,7 @@ JPA BUDDY PLUGIN
 
 
 ![image](https://github.com/user-attachments/assets/e563cf8d-fd67-4f9a-b6fe-bd79f3f0b068)
+
+![image](https://github.com/user-attachments/assets/54e6cb56-b592-404c-8114-87ec1cc337ad)
+![image](https://github.com/user-attachments/assets/101f8224-13d2-441b-ac46-72c2171e5b75)
+
