@@ -9,3 +9,22 @@ This repository contains source code examples to support my course [Spring Data 
 * Follow Spring Framework Guru on [Twitter](https://twitter.com/spring_guru)
 * Connect with John Thompson on [LinkedIn](http://www.linkedin.com/in/springguru)
 
+```
+
+    @Disabled
+    @Rollback(value = false)
+    @Test
+    void testDataLoader() {
+        List<Product> products = loadProducts();
+        Customer customer = loadCustomers();
+
+        int ordersToCreate = 100;
+
+        for (int i = 0; i < ordersToCreate; i++){
+            System.out.println("Creating order #: " + i);
+            saveOrder(customer, products);
+        }
+
+        orderHeaderRepository.flush();
+    }
+```
