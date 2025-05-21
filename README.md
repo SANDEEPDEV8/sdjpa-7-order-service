@@ -12,7 +12,7 @@ This repository contains source code examples to support my course [Spring Data 
 ```
 public class OrderHeader extends BaseEntity {
 
-    @OneToMany(mappedBy = "orderHeader", cascade = {CascadeType.PERSIST, CascadeType.REMOVE})
+    @OneToMany(mappedBy = "orderHeader", cascade = {CascadeType.PERSIST, CascadeType.REMOVE})  // if you delete orver header, it also removes orderLines
     private Set<OrderLine> orderLines;
 
     @OneToOne(cascade = CascadeType.PERSIST)
